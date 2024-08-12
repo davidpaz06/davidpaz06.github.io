@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>David Paz</title>
+    <link
+      rel="shortcut icon"
+      href="Icons/logo-web-component.svg"
+      type="image/x-icon"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="../Minus/Minus.js"></script>
+  </head>
+
+  <body>
+    <script>
+      let minusInit = async () => {
+        let state = false;
+        darkModeElement = document.querySelectorAll("*");
+        function darkMode() {
+          darkModeElement.forEach((e) => {
+            if (state) {
+              e.classList.remove("darkmode");
+              stopTyping = true;
+              clearTimeout(typingTimeout);
+              tipDiv.textContent = "";
+            } else {
+              e.classList.add("darkmode");
+              e.style.transition = "ease 0.7s";
+            }
+          });
+
+          state = !state;
+          console.log(document.getElementsByTagName("p"));
+        }
+
+        minus.click = () => {
+          darkMode();
+        };
+        let s1 = await minus.createInstance("MinusSwitch", {});
+      };
+    </script>
+
+    <!-- front page -->
+    <div class="front">
+      <div class="column" id="c1">
+        <div class="header" id="tab1">
+          <ion-icon name="logo-web-component"></ion-icon>
+          <label id="portfolio">portfolio</label>
+        </div>
+
+        <div class="about">
+          <div id="portrait" class="img"></div>
+          <img src="./monalisa.jpg" alt="me" />
+          <h2 class="CV">Check CV</h2>
+        </div>
+      </div>
+
+      <div class="column" id="c2">
+        <div class="header" id="tab2">
+          <label id="projectsButton">projects</label>
+          <label id="contactButton">contact</label>
+        </div>
+
+        <div class="info">
+          <div class="mobile-about">
+            <div id="mobile-portrait" class="img"></div>
+            <img src="./monalisa.jpg" alt="me" />
+            <h2 class="CV">Check CV</h2>
+          </div>
+
+          <p id="p1">Hi! my name is</p>
+          <h1 id="name">David Paz,</h1>
+          <p id="p2">
+            I'm a Computer Engineering student currently in my last year of
+            college at Universidad Rafael Urdaneta.
+          </p>
+
+          <p id="p3">
+            I love web and mobile development, hence why i created this little
+            portfolio where i'll be posting some of my favorites projects.
+          </p>
+
+          <h2 id="desktop-skills">- Skills -</h2>
+
+          <div class="langs">
+            <ion-icon name="logo-html5"></ion-icon>
+            <ion-icon name="logo-css3"></ion-icon>
+            <ion-icon name="logo-javascript"></ion-icon>
+            <ion-icon name="logo-react"></ion-icon>
+            <ion-icon name="logo-nodejs"></ion-icon>
+            <div class="black"></div>
+          </div>
+
+          <br />
+          <p id="p4">Feel free to scroll down and check some of my work!</p>
+          <div id="mobile-skills">
+            <h2 class="mobile-skills" id="skills">- Skills -</h2>
+            <div class="mobile-langs">
+              <ion-icon name="logo-html5"></ion-icon>
+              <ion-icon name="logo-css3"></ion-icon>
+              <ion-icon name="logo-javascript"></ion-icon>
+              <ion-icon name="logo-react"></ion-icon>
+              <ion-icon name="logo-nodejs"></ion-icon>
+              <div class="black"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column" id="c3">
+        <div class="language">
+          <div class="language-select">
+            <ion-icon class="lang" name="language-outline"></ion-icon>
+            <label id="langid">ENG</label>
+          </div>
+        </div>
+        <div class="header" id="tab3">
+          <minus-switch
+            id="s1"
+            size="22px"
+            color="#ffc31f"
+            onclick="minus.click()"
+          ></minus-switch>
+
+          <a href="https://github.com/" target="_blank">
+            <ion-icon name="logo-github"></ion-icon>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/david-paz-68242325a/"
+            target="_blank"
+          >
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+          <a href="https://www.instagram.com/davidpaz06/" target="_blank">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+        </div>
+
+        <div class="tip" id="tip"></div>
+      </div>
+    </div>
+
+    <!-- projects section -->
+    <div class="projects" id="projects">
+      <div class="row">
+        <div class="project-row">
+          <div class="project-language"><h2>Web</h2></div>
+          <div class="project-caroussel"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="project-row">
+          <div class="project-language"><h2>Mobile</h2></div>
+          <div class="project-caroussel"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="project-row">
+          <div class="project-language"><h2>Framework</h2></div>
+          <div class="project-caroussel"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- contact section -->
+    <div class="contact" id="contact">
+      <h3>Enjoy what you see? let's work together!</h3>
+
+      <div class="contact-info">
+        <label>
+          <ion-icon name="call-outline"></ion-icon>
+          <a href="tel:+584129968751">+58 0412-9968751</a>
+        </label>
+        <label>
+          <ion-icon name="mail-outline"></ion-icon>
+          <a href="mailto:davidalbertopaz@gmail.com"
+            >davidalbertopaz@gmail.com</a
+          >
+        </label>
+        <label>
+          <ion-icon name="location-outline"></ion-icon
+          ><label id="address">Maracaibo, Venezuela</label>
+        </label>
+      </div>
+
+      <div class="mobile-contact-info">
+        <label>
+          <ion-icon name="call-outline"></ion-icon>
+          <a href="tel:+584129968751" id="cel">+58 0412-9968751</a>
+        </label>
+        <label>
+          <ion-icon name="mail-outline" id="correo"></ion-icon>
+          <a href="mailto:davidalbertopaz@gmail.com"
+            >davidalbertopaz@gmail.com</a
+          >
+        </label>
+        <label>
+          <ion-icon name="location-outline"></ion-icon
+          ><label id="address">Maracaibo, Venezuela</label>
+        </label>
+      </div>
+      <div class="mobile-social-media">
+        <a href="https://github.com/" target="_blank">
+          <ion-icon name="logo-github"></ion-icon>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/david-paz-68242325a/"
+          target="_blank"
+        >
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+        <a href="https://www.instagram.com/davidpaz06/" target="_blank">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+      </div>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>

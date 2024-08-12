@@ -1,0 +1,560 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* icons */
+#tab1 ion-icon {
+  font-size: 54px;
+  margin-left: 8px;
+}
+
+#tab3 ion-icon {
+  font-size: 28px;
+  padding: 8px;
+  cursor: pointer;
+  color: #f0f0f0;
+}
+
+.info ion-icon {
+  font-size: 60px;
+  padding: 8px;
+}
+
+[name="logo-html5"] {
+  color: rgb(255, 115, 0) !important;
+}
+
+[name="logo-css3"] {
+  color: rgb(41, 152, 255) !important;
+}
+
+[name="logo-javascript"] {
+  color: rgb(255, 196, 0) !important;
+}
+
+[name="logo-react"] {
+  color: rgb(63, 210, 243) !important;
+}
+
+[name="logo-nodejs"] {
+  color: rgb(114, 189, 73) !important;
+}
+
+/* light font */
+@font-face {
+  font-family: "Poppins-Light";
+  src: url(Fonts/Poppins-Light.ttf);
+}
+
+/* regular font */
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url(Fonts/Poppins-Regular.ttf);
+}
+
+/* bold font */
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url(Fonts/Poppins-Medium.ttf);
+}
+
+/* courier */
+@font-face {
+  font-family: "Courier";
+  src: url(Fonts/CourierPrime-Regular.ttf);
+}
+
+/* body and scrollbar */
+
+body {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 7px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #c9b783;
+  border-radius: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #141414;
+}
+
+/* main containers */
+.front {
+  height: 100vh;
+  width: 100vw;
+  background-color: #f0f0f0;
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  /* overflow-y: hidden; */
+}
+
+.projects {
+  height: 180vh;
+  width: 100vw;
+  background: #141414;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.contact {
+  height: 25vh;
+  width: 100vw;
+  background-color: #f0f0f0;
+}
+
+/* front */
+.header {
+  background-color: #141414;
+  margin-top: 60px;
+  width: 100%;
+  height: 10%;
+  color: #f0f0f0;
+  font-family: "Poppins-Medium";
+  font-size: 26px;
+}
+
+#tab1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Poppins-Light";
+  font-size: 24px;
+}
+
+#tab2 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#tab3 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 10px;
+}
+
+#tab2 label:hover {
+  font-size: 25px;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.about {
+  margin-top: 82px;
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins-Regular";
+}
+
+img {
+  width: 90%;
+  height: 100%;
+  opacity: 0;
+}
+
+@media (min-width: 1000px) {
+  .about {
+    width: 280px;
+  }
+}
+.about h2 {
+  cursor: pointer;
+  border-radius: 15px;
+  margin-top: 10px;
+  text-align: center;
+  transition: 0.7s;
+  padding: 5px;
+}
+
+.about h2:hover {
+  background-color: #141414;
+  color: #f0f0f0;
+}
+
+.info {
+  height: 100%;
+  font-family: "Poppins-Regular";
+  padding-top: 20px;
+  text-align: justify;
+  color: #141414;
+}
+
+.info h1 {
+  font-size: 45px;
+  font-family: "Poppins-Medium";
+  opacity: 0;
+  position: relative;
+  animation-name: slide;
+  animation-duration: 2.2s;
+}
+
+@keyframes slide {
+  from {
+    left: -30px;
+  }
+
+  to {
+    left: 0px;
+  }
+}
+
+.info p {
+  margin: 10px 0px;
+  color: #2b2b2b;
+}
+
+.info h2 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 28px;
+}
+
+.langs {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tip {
+  font-family: "Courier";
+  margin-top: 10px;
+  margin-left: 20%;
+  font-size: 14px;
+  width: 75%;
+  align-items: center;
+}
+
+.language {
+  position: absolute;
+  display: flex;
+  width: 30%;
+  height: 60px;
+  align-items: center;
+  justify-content: flex-end;
+  font-family: "Poppins-regular";
+}
+
+.language-select {
+  border: 1px solid silver;
+  margin-right: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 65px;
+  justify-content: space-between;
+}
+
+/* projects */
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f0f0f0;
+}
+
+.project-row {
+  height: 95%;
+  width: 97%;
+  display: flex;
+  align-items: center;
+}
+
+.project-row h2 {
+  font-family: "Poppins-light";
+}
+
+.project-language {
+  width: 21%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-caroussel {
+  border: 1px solid #f0f0f0;
+  height: 100%;
+  width: 79%;
+}
+
+/* contact */
+
+.contact {
+  font-family: "Poppins-medium";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+.contact-info {
+  font-family: "Poppins-light";
+  margin-top: 28px;
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.contact-info a {
+  color: #2b2b2b;
+  text-decoration: none;
+}
+
+/* dark mode */
+
+.darkmode {
+  transition: ease 0.7s;
+}
+
+.darkmode body::-webkit-scrollbar-thumb {
+  background-color: #f0f0f0;
+}
+
+.darkmode body::-webkit-scrollbar-track {
+  background-color: #1c1c1c;
+}
+
+.darkmode .front,
+.darkmode .projects {
+  background-color: #1c1c1c;
+}
+
+.darkmode .contact {
+  background-color: rgb(84, 84, 84);
+}
+
+.darkmode label,
+.darkmode h2,
+.darkmode h3,
+.darkmode h1 {
+  color: #f0f0f0;
+}
+
+.darkmode p {
+  color: silver;
+  font-family: "Poppins-light";
+}
+
+.darkmode h1 {
+  font-family: "Poppins-regular";
+}
+
+.darkmode a,
+.darkmode #tip,
+.darkmode #address {
+  color: silver;
+}
+
+.darkmode .about h2:hover {
+  background-color: #f0f0f0;
+  color: #1c1c1c;
+}
+.darkmode .header {
+  background-color: rgb(84, 84, 84);
+  font-family: "Poppins-regular";
+}
+
+.darkmode ion-icon {
+  color: #f0f0f0;
+}
+
+.darkmode .mobile-about h2 {
+  border: 2px solid #f0f0f0;
+}
+
+.darkmode #cel{
+  color: silver;
+}
+
+.darkmode .mobile-contact-infoca{
+  color: silver;
+}
+
+/* mobile view */
+.mobile-about h2 {
+  cursor: pointer;
+  border-radius: 15px;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 23px;
+}
+
+#mobile-skills {
+  margin-top: 20px;
+  flex-direction: column;
+  font-family: "Poppins-medium";
+  font-size: 20px;
+  display: none;
+}
+
+.mobile-skills {
+  display: flex;
+  justify-content: center;
+}
+
+.mobile-langs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+}
+
+.mobile-about {
+  display: none;
+}
+
+.mobile-contact-info {
+  display: none;
+}
+
+.mobile-social-media {
+  display: none;
+}
+
+@media (max-width: 650px) {
+  .front {
+    height: 230vh;
+  }
+
+  .header {
+    height: 7%;
+  }
+
+  #tab2 {
+    display: flex;
+    flex-direction: column;
+    font-size: 23px;
+  }
+
+  #mobile-skills {
+    display: flex;
+  }
+
+  #desktop-skills {
+    display: none;
+  }
+  .langs {
+    display: none;
+  }
+
+  #tab2 label:hover {
+    font-size: 22px;
+  }
+
+  #tab3 ion-icon {
+    display: none;
+  }
+
+  minus-switch {
+    margin-right: 10px;
+  }
+
+  #portfolio {
+    display: none;
+  }
+
+  .about {
+    display: none;
+  }
+
+  .mobile-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  img {
+    border-radius: 10%;
+    width: 100%;
+  }
+
+  .CV {
+    border: 2px solid #1c1c1c;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 5px;
+  }
+
+  .projects {
+    height: 250vh;
+  }
+
+  .project-row {
+    flex-direction: column;
+  }
+
+  .project-language {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .project-caroussel {
+    border: 1px solid #f0f0f0;
+    height: 100%;
+    width: 100%;
+  }
+
+  .contact-info {
+    display: none;
+  }
+
+  .contact h3 {
+    margin-top: 35px;
+  }
+
+  .contact {
+    display: flex;
+    justify-content: flex-start;
+    height: 60vh;
+  }
+
+  .mobile-contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-top: 25px;
+  }
+
+  .mobile-contact-info a,
+  .mobile-contact-info label {
+    color: #2b2b2b;
+    text-decoration: none;
+    padding: 5px;
+    font-size: 16px;
+  }
+
+  .mobile-social-media {
+    display: flex;
+    flex-direction: row;
+    color: #1c1c1c;
+    font-size: 50px;
+  }
+
+  .mobile-social-media a {
+    padding: 40px;
+    color: #2b2b2b;
+  }
+}
