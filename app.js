@@ -86,7 +86,7 @@ const translationsENG = [
   "I love web and mobile development, hence why i created this little portfolio where i'll be posting some of my favorites projects.",
   "- Skills -",
   "Feel free to scroll down and check some of my work",
-  "- Skills -",
+  "Skills",
   "Web",
   "Mobile",
   "Framework",
@@ -105,7 +105,7 @@ const translationsESP = [
   "Me gusta el desarrollo web y de móviles, es por eso que hice este pequeño portafolio donde mostraré algunos de mis proyectos favoritos.",
   "- Habilidades -",
   "¡Abajo conocerás un poco sobre mi trabajo!",
-  "- Habilidades -",
+  "Habilidades",
   "Web",
   "Mobile",
   "Framework",
@@ -125,8 +125,7 @@ language.addEventListener("click", () => {
     text.forEach((t, i) => {
       t.textContent = translationsENG[i];
     });
-    skills.style.marginTop = '70px'
-
+    skills.style.marginTop = "70px";
   } else {
     switchLang.textContent = "ESP";
     tip =
@@ -134,7 +133,7 @@ language.addEventListener("click", () => {
     text.forEach((t, i) => {
       t.textContent = translationsESP[i];
     });
-    skills.style.marginTop = '100px'
+    skills.style.marginTop = "100px";
   }
 
   stopTyping = false;
