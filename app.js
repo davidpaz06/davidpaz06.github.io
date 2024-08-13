@@ -70,7 +70,8 @@ scrollButtons[1].addEventListener("click", () => {
 const text = document.querySelectorAll(
   "h1, h2, h3, p, #portfolio, #projectsButton, #contactButton"
 );
-console.log(text);
+let skills = document.querySelector(".mobile-langs");
+
 const language = document.querySelector(".language-select");
 const switchLang = document.querySelector("#langid");
 const translationsENG = [
@@ -124,6 +125,8 @@ language.addEventListener("click", () => {
     text.forEach((t, i) => {
       t.textContent = translationsENG[i];
     });
+    skills.style.marginTop = '70px'
+
   } else {
     switchLang.textContent = "ESP";
     tip =
@@ -131,6 +134,7 @@ language.addEventListener("click", () => {
     text.forEach((t, i) => {
       t.textContent = translationsESP[i];
     });
+    skills.style.marginTop = '90px'
   }
 
   stopTyping = false;
