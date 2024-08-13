@@ -94,7 +94,6 @@ body::-webkit-scrollbar-track {
   background-color: #f0f0f0;
   display: grid;
   grid-template-columns: 30% 40% 30%;
-  overflow-y: hidden;
 }
 
 .projects {
@@ -440,6 +439,7 @@ h3 {
 @media (max-width: 650px) {
   .front {
     height: 190vh;
+    overflow-y: hidden;
   }
 
   .header {
@@ -454,6 +454,7 @@ h3 {
 
   #mobile-skills {
     display: flex;
+    z-index: 0;
   }
 
   #desktop-skills {
@@ -503,6 +504,7 @@ h3 {
 
   .projects {
     height: 250vh;
+    z-index: 1;
   }
 
   .project-row {
@@ -562,6 +564,6 @@ h3 {
   }
 
   #skills{
-    font-size: 25px;
+    font-size: 22px;
   }
 }
