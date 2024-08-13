@@ -134,7 +134,7 @@ language.addEventListener("click", () => {
     text.forEach((t, i) => {
       t.textContent = translationsESP[i];
     });
-    skills.style.marginTop = '90px'
+    skills.style.marginTop = '100px'
   }
 
   stopTyping = false;
