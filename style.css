@@ -94,7 +94,7 @@ body::-webkit-scrollbar-track {
   background-color: #f0f0f0;
   display: grid;
   grid-template-columns: 30% 40% 30%;
-  /* overflow-y: hidden; */
+  overflow-y: hidden;
 }
 
 .projects {
@@ -559,5 +559,9 @@ h3 {
   .mobile-social-media a {
     padding: 40px;
     color: #2b2b2b;
+  }
+
+  #skills{
+    font-size: 25px;
   }
 }
